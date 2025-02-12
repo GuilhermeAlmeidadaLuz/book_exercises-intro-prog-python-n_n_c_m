@@ -25,3 +25,4 @@ elif operação == 'divisão' or operação == '/':
     print(f'\n{num1} / {num2} = {num1 / num2}')
 else:
     print('Operação inválida! Tente novamente.')
+print()
