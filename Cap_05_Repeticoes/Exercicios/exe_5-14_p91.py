@@ -20,4 +20,4 @@ while True:
 media_aritm = soma / qtd_nums
 print(f'Quantidade de números digitados: {qtd_nums}\n'
       f'Soma: {soma}', '\n'
-      f'Média Aritmética: {media_aritm:8.2f}', '\n')   
+      f'Média Aritmética: {media_aritm:8.2f}', '\n')
