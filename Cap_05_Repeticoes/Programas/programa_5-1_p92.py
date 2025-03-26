@@ -1,11 +1,5 @@
-# Data: 10/03/2025
-
-# ============ EXERCÍCIO 5.16 (PÁG. 93) ============
-
-# Execute o Programa 5.1 para os seguintes valores: 501, 745, 384, 2, 7 e 1
-
 # Programa 5.1 - Contagem de cédulas
-print(f"\n{ '=' * 10} Programa 5.1 - Contagem de cédulas { '=' * 10 }\n")
+
 valor = int(input("Digite o valor a pagar: "))
 cédulas = 0                     # quantidade de cédulas para pagar o valor
 atual = 50                      # inicia com cédula com quantia de R$ 50,00. Prioridade da maior para a menor na contagem de cédulas
@@ -21,9 +15,9 @@ while True:
 
         # if para variável 'apagar':
         if apagar == 0:
-            break               # quando o valor a ser pago é zero, interrompe-se o fluxo do 'while' com o comando 'break'
+            break               # quando o valor a ser pago é zerado, interrompe-se o fluxo do 'while' com o comando 'break'
         
-        # if e elifs para variável 'atual':
+        # ifs para variável 'atual':
         
         if atual == 50:         # após verificar que 'atual <= apagar' retorna 'False' para 'atual' == 50, altera 'atual' para '20' (a próxima cédula de maior valor) 
             atual = 20          # atual recebe 20
@@ -38,4 +32,16 @@ while True:
             atual = 1           # atual recebe 1 - última cédula útil
  
         cédulas = 0             # a quantidade de cédulas usadas de 'atual' é zerada para contagem com novo valor de atual (valor da cédula no momento)
-print()
+
+
+
+# ============ EXERCÍCIO 5.17 (PÁG. 93) ============
+
+# O que acontece se digitarmos 0 (zero) no valor a pagar?
+# 
+# Resposta => Será efetuada a verificação no 1º 'if' que se encontra na linha seguinte a instrução 'while', que retorna 'False' pois a variável
+#               'atual = 50' não é menor ou igual que a variável 'apagar = 0', portanto, esse bloco não é executado e entra no bloco de instruções
+#               do 1º 'else', imprime a mensagem que informa a quantidade de cédulas utilizadas (qtd = 0 cédulas) da variável 'atual = 50' para
+#               abater do valor a pagar e em seguida entra em outro bloco de instrução de um 2º 'if', que tem a vericação com retorno 'True', pois
+#               a variável 'apagar = 0' que recebeu 0 satisfaz a condição 'apagar == 0', e então, o comando 'break' é efetuado, interrompendo o fluxo
+#               do programa
